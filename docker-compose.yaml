@@ -1,0 +1,52 @@
+services:
+  backend:
+    image: haqimazhar/devops-capstone-project-service:v0.0.7
+    ports:
+      - "4000:4000"
+    secrets:
+      - github_token
+    networks:
+      - my_app_network
+
+  frontend:
+    image: haqimazhar/devops-capstone-project:v0.0.7
+    ports:
+      - "3002:3002"
+    # environment:
+    #   - NEXT_PUBLIC_BACKEND_URL=${NEXT_PUBLIC_BACKEND_URL}
+    depends_on:
+      - backend
+    networks:
+      - my_app_network
+
+  prometheus:
+    image: prom/prometheus:latest
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+    networks:
+      - my_app_network
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus
+    networks:
+      - my_app_network
+    volumes:
+      - grafana-storage-gkk-app:/var/lib/grafana
+
+
+secrets:
+  github_token:
+    file: ./secrets/github_token
+
+networks:
+  my_app_network:
+    driver: bridge
+
+volumes:
+  grafana-storage-gkk-app:
