@@ -20,9 +20,10 @@ This repository is created to deliver the requested DevOps capstone project for 
 ### Monitoring
 1. **Prometheus**: An open-source systems monitoring and alerting toolkit.
 2. **Grafana**: An open-source platform for monitoring and observability. Grafana is used to visualize metrics collected by Prometheus from the Node.js backend endpoint.
+   
 
-### High Level Architecture 
-![image](https://github.com/luqmanhaqim/personal-website/assets/169234696/d9370a2d-a22e-4065-b6eb-dfd327419e62)
+## High Level Architecture Diagram
+![image](https://github.com/luqmanhaqim/personal-website/assets/169234696/621395c0-0bb1-49b4-b137-139308419624)
 
 
 ## Setup Instructions
