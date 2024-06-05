@@ -1,6 +1,6 @@
 services:
   backend:
-    image: haqimazhar/devops-capstone-project-service:v0.0.7
+    image: haqimazhar/devops-capstone-project-be:latest
     ports:
       - "4000:4000"
     secrets:
@@ -9,7 +9,7 @@ services:
       - my_app_network
 
   frontend:
-    image: haqimazhar/devops-capstone-project:v0.0.7
+    image: haqimazhar/devops-capstone-project-fe:latest
     ports:
       - "3002:3002"
     # environment:
@@ -38,7 +38,6 @@ services:
       - my_app_network
     volumes:
       - grafana-storage-gkk-app:/var/lib/grafana
-
 
 secrets:
   github_token:
