@@ -23,7 +23,8 @@ This repository is created to deliver the requested DevOps capstone project for 
    
 
 ## High Level Architecture Diagram
-![image](https://github.com/luqmanhaqim/personal-website/assets/169234696/621395c0-0bb1-49b4-b137-139308419624)
+![image](![image](https://github.com/luqmanhaqim/personal-website/assets/114890362/7e3e6be7-7882-4555-bf6e-86c2abcfcd25)
+)
 
 
 ## Setup Instructions
