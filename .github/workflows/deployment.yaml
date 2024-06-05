@@ -54,3 +54,12 @@ jobs:
         context: ./services
         push: true
         tags: haqimazhar/devops-capstone-project-be:latest
+
+  job-completion:
+    name: Job Completion Notification
+    runs-on: ubuntu-latest
+    needs: [build-and-push-fe, build-and-push-be]
+    
+    steps:
+    - name: Notify user
+      run: echo "Image has been pushed"
