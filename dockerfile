@@ -23,5 +23,5 @@ EXPOSE 3002
 ENV PORT=3002
 ENV NEXT_PUBLIC_BACKEND_URL=http://backend:4000/api/repos
 
-# Start the Next.js application
+# Start the Next.js application #lol
 CMD ["npm","run","start"]
